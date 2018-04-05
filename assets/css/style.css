@@ -1,13 +1,25 @@
-/* .placeholder {
-    top: 0%;
-    position: absolute;
-    display: block;
-    height: 73px;
-} */
+.logo-transition {
+    transition: all 0.4s;
+}
 
 .logo {
+    top: 0%;
+    left: 0%;
+    width: 309px;
+    height: 145px;
     display: block;
     margin: 0 auto;
+}
+
+.sticky-logo {
+    left: 0%;
+    top: 0%;
+    position: fixed;
+    display: block;
+    width: 100px;
+    height: 50px;
+    z-index: 1;
+    padding-left: 15px;
 }
 
 .navbar {
@@ -18,7 +30,6 @@
     display: block;
     text-align: right;
     height: 73px;
-    /* margin: 25px; */
     border-bottom: 1px solid rgb(48, 48, 48);
     box-shadow: 0px -2px 4px 4px;
     padding: 25px;
@@ -66,13 +77,13 @@
     display: block;
     height: 90px;
     width: 90px;
-    margin: 150 auto;
+    margin: 50px auto;
     cursor: pointer;
-    transition: all 0.4s;
+    transition: transform 0.4s;
 }
 
 .play-icon:hover {
-    fill: rgb(58, 47, 47);
+    transform: scale(1.5);
 }
 
 .wtf {
@@ -83,10 +94,9 @@
     position: fixed;
     width: 100%
   }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .logo {
-    padding-top: 73px;
+
+.sticky ~ .play-icon {
+    padding-top: 220px;
 }
 
 .sticky-nav {
@@ -100,13 +110,13 @@
     z-index: 1;
   }
 
-.sticky-nav  > .nav-item {
+.sticky-nav > .nav-item {
     font-weight: bold;
     color: white;
     padding: 13px;
     transition: all 0.5s;
 }
 
-.sticky-nav  > .nav-item:hover {
+.sticky-nav > .nav-item:hover {
     background: rgb(110, 0, 110);
 }
