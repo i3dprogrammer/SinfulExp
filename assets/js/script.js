@@ -1,6 +1,9 @@
 var elem = document.querySelector('.parallax');
 var instance = M.Parallax.init(elem);
 
+elem = document.querySelector('.modal');
+instance = M.Modal.init(elem);
+
 // When the user scrolls the page, execute myFunction
 window.onscroll = function () { myFunction() };
 
@@ -26,4 +29,28 @@ function myFunction() {
         logo.classList.remove('sticky-logo');
         logo.classList.add('logo');
     }
-} 
+}
+
+var modal = document.querySelector(".s-modal");
+var close_elements = document.querySelectorAll(".s-modal-close");
+var html_doc = document.documentElement;
+
+close_elements.forEach((mclose, index) => {
+    mclose.addEventListener("click", () => {
+        modal.style.display = 'none';
+        html_doc.style.overflowY = 'auto';
+    })
+})
+
+var show_vid_el = document.querySelector('.play-icon');
+show_vid_el.addEventListener('click', (event) => {
+    modal.style.display = '';
+    html_doc.style.overflowY = 'hidden';
+});
+
+window.addEventListener("keydown", (event) => {
+    if (event.keyCode == 27) {
+        modal.style.display = 'none';
+        html_doc.style.overflowY = 'auto';
+    }
+});
