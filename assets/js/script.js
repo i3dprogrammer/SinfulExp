@@ -44,7 +44,7 @@ close_elements.forEach((mclose, index) => {
 
 var show_vid_el = document.querySelector('.play-icon');
 show_vid_el.addEventListener('click', (event) => {
-    modal.style.display = '';
+    modal.style.display = 'inline';
     html_doc.style.overflowY = 'hidden';
 });
 
