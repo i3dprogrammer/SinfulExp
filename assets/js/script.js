@@ -1,8 +1,8 @@
-var elem = document.querySelector('.parallax');
-var instance = M.Parallax.init(elem);
+document.querySelectorAll('.parallax').forEach((parallax, index) => {
+    M.Parallax.init(parallax);
+});
 
-elem = document.querySelector('.modal');
-instance = M.Modal.init(elem);
+M.Modal.init(document.querySelector('.modal'));
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function () { myFunction() };
