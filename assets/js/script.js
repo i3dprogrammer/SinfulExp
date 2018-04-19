@@ -4,6 +4,10 @@ document.querySelectorAll('.parallax').forEach((parallax, index) => {
 
 M.Modal.init(document.querySelector('.modal'));
 
+document.querySelectorAll('.materialboxed').forEach((box, index) => {
+    M.Materialbox.init(box);
+});
+
 // When the user scrolls the page, execute myFunction
 window.onscroll = function () { myFunction() };
 
@@ -31,7 +35,7 @@ function myFunction() {
     }
 }
 
-var modal = document.querySelector(".s-modal");
+var modal = document.querySelector(".s-modal"); // Make multiple modals available.
 var close_elements = document.querySelectorAll(".s-modal-close");
 var html_doc = document.documentElement;
 

@@ -1,3 +1,7 @@
+.row {
+    margin: 0px !important;
+}
+
 .logo-transition {
     transition: all 0.4s;
 }
@@ -86,15 +90,12 @@
     width: 100%
   }
 
-/* .sticky ~ .play-icon {
-    margin-top: 270px;
-} */
-
 .sticky-nav {
     display: block;
     text-align: right;
     height: 50px;
-    background-color: rgb(63, 0, 63);
+    /* background-color: rgb(63, 0, 63); */
+    background: linear-gradient(to right, rgb(100, 0, 100), rgb(63, 0, 63));
     border-bottom: 1px solid rgb(48, 48, 48);
     box-shadow: 0px -2px 4px 4px;
     padding: 13px;
@@ -140,21 +141,96 @@
     position: absolute;
     right: 5%;
     color: #aaa;
-    font-size: 100px;
+    font-size: 5rem;
     font-weight: bold;
     cursor: pointer;
-    z-index: 3;pxheight: 150;
-    width: 250px
+    z-index: 3;
 }
 
 .s-modal-close:hover {
     color: gray;
 }
 
+
+/* About section */
+
+.heading-secondary {
+    font-size: 40px;
+    text-align: center;
+}
+
+.heading-tertiary {
+    font-size: 25px;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 20px;
+}
+
+.u-margin-bottom-medium {
+    margin-bottom: 40px;
+}
+
+.u-margin-bottom-large {
+    margin-bottom: 60px;
+}
+
+.section-about {
+    background: linear-gradient(to right bottom, rgb(44, 44, 44),rgb(36, 36, 36));
+    padding-top: 40px;
+    color: white;
+}
+
+.about-images {
+    position: relative;
+    height: 400px;
+}
+
+.about-image {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 450px;
+    z-index: 1;
+    transition: all .3s;
+    box-shadow: 0px 5px 15px black;
+    border-radius: 3px;
+    background-size: cover;
+}
+
+.about-image:hover {
+    opacity: 1 !important;
+    z-index: 2;
+    transform: scale(1.1);
+}
+
+.about-image-1 {
+    background-color: orangered;
+}
+
+.about-image-2 {
+    background-color: black;
+    top: 10%;
+    left: 30%;
+}
+
+.about-image-3 {
+    background-color: yellow;
+    top: 20%;
+    left: 10%;
+}
+
+.about-images:hover .about-image:not(:hover){
+    transform: scale(0.90);
+}
+
 /* Available hacks section */
 
+.section-hacks {
+    background-color: rgb(46, 46, 46);
+}
+
 .hacks {
-    /* background: #f0f0f0; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
