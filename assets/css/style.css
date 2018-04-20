@@ -205,23 +205,23 @@
 }
 
 .about-image-1 {
-    background-color: orangered;
+    /* background-color: orangered; */
 }
 
 .about-image-2 {
-    background-color: black;
+    /* background-color: black; */
     top: 10%;
     left: 30%;
 }
 
 .about-image-3 {
-    background-color: yellow;
+    /* background-color: yellow; */
     top: 20%;
     left: 10%;
 }
 
 .about-images:hover .about-image:not(:hover){
-    transform: scale(0.90);
+    transform: scale(0.95);
 }
 
 /* Available hacks section */
@@ -263,7 +263,6 @@
 .hack-image {
     /* height: 180px; */
     width: 250px;
-    background: red;
 }
 
 .hack-image > img {
@@ -328,4 +327,28 @@
 .white-text {
     color:white;
     font-weight: normal;
+}
+
+/* Section features */
+
+.section-features {
+    padding: 100px 0;
+    background-image: linear-gradient(to right, rgba(0, 51, 135, 0.8), rgba(0, 26, 71, 0.8)), url('../images/bg2.jpg');
+    background-size: cover;
+    /* background-color: rgb(107, 107, 107); */
+}
+
+.feature {
+    padding: 20px;
+    height: 350px;
+    text-align: center;
+    background-color: rgba(224, 224, 224, 0.8);
+    border-radius: 3px;
+    /* box-shadow: 0px 0px 3px black; */
+    transition: all .3s;
+}
+
+.feature:hover {
+    transform: translateY(-30px);
+    box-shadow: 0px 0px 15px black;
 }
