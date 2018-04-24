@@ -68,17 +68,14 @@
 }
 
 .card-title {
-    box-sizing: border-box;
     font-weight: 300;
     text-transform: uppercase;
     font-size: 28px;
     color: black;
     position: absolute;
-    left: 50%;
-    transform: translateX(-60%);
     top: 190px;
-    text-align: right;
-    width: 75%;
+    text-align: center;
+    width: 100%;
 }
 
 .heading-span {
