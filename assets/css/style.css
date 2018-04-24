@@ -204,6 +204,14 @@
     text-align: center;
 }
 
+.u-white-color {
+    color: white;
+}
+
+.u-thin-text {
+    font-weight: 100;
+}
+
 .section-about {
     background: linear-gradient(to right bottom, rgb(44, 44, 44),rgb(36, 36, 36));
     padding-top: 40px;
@@ -372,7 +380,7 @@
 .feature {
     margin-bottom: 35px;
     padding: 20px;
-    height: 350px;
+    /* height: 350px; */
     text-align: center;
     background-color: rgba(224, 224, 224, 0.8);
     border-radius: 3px;
@@ -383,4 +391,12 @@
 .feature:hover {
     transform: translateY(-30px);
     box-shadow: 0px 0px 15px black;
+}
+
+footer {
+    padding: 2px;
+    margin: 0px;
+    color: white;
+    background-color: rgb(46, 46, 46);
+    text-align: center;
 }
