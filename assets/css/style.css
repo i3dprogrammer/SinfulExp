@@ -406,6 +406,7 @@ html {
     margin: 35px auto;
     padding: 20px;
     /* height: 350px; */
+    min-height: 350px;
     text-align: center;
     background-color: rgba(224, 224, 224, 0.8);
     border-radius: 3px;

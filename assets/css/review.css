@@ -51,3 +51,25 @@
 .review-arrow:hover {
     border: 3px solid rgba(255,255,255, 1);
 }
+
+.reviewChange {
+    animation: reviewChangeAnimation .3s;
+}
+
+@keyframes reviewChangeAnimation {
+    0% {
+        filter: blur(0px);
+        transform: scale(1) skewX(-25deg);
+        opacity: 1;
+    }
+    50% {
+        filter: blur(10px);
+        transform: scale(1.1) skewX(-25deg);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0px);
+        transform: scale(1) skewX(-25deg);
+        opacity: 1;
+    }
+}

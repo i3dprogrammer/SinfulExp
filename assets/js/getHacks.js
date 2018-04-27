@@ -71,7 +71,7 @@ var hackCard = function (hackName, hackStatus, imgLink, hackf1, hackf2, hackf3, 
                     </ul>
                 </div>
             </div>
-            <div class="card-side card-side--back">
+            <div class="card-side card-side--back card-side--back-1">
                 <div class="box-center">
                     <div class="price-duration">${price1.split('-')[0].trim()}</div>
                     <div class="price-value">${price1.split('-')[1].trim()}</div>
@@ -79,7 +79,7 @@ var hackCard = function (hackName, hackStatus, imgLink, hackf1, hackf2, hackf3, 
                     <div class="price-value">${price2.split('-')[1].trim()}</div>
                     <div class="price-duration">${price3.split('-')[0].trim()}</div>
                     <div class="price-value">${price3.split('-')[1].trim()}</div>
-                    <a class="custom-button btn-white pulse">Buy now!</a>
+                    <a href="https://sinfulexp.net/forum/payments.php" class="custom-button btn-white pulse">Buy now!</a>
                 </div>
             </div>
         </div>
@@ -119,3 +119,35 @@ window.onload = function() {
 }
 
 //hacksRow.appendChild(hackCard('Paladins', 'undetected', 'Aimbot', 'Wallhack', 'ESP', 'No Recoil', 'No Spread & MORE!', '1 Month - $20', '3 Month - $30', '1 YEAR - $100'));
+
+var nextReview = document.getElementById("next-review");
+var reviewEl = document.getElementById("review");
+var previousReview = document.getElementById("previous-review");
+var reviewTitle = document.getElementById("review-title");
+var reviewText = document.getElementById("review-text");
+var currentReview = 0;
+
+function viewReview(){
+    // Play animation
+    reviewEl.style.animation = 'none';
+    reviewEl.offsetHeight;
+    reviewEl.style.animation = '';
+
+
+    // Change text
+    review = featuredReviews[currentReview % featuredReviews.length];
+    reviewTitle.innerText = review.title;
+    reviewText.innerText = review.review;
+}
+
+nextReview.addEventListener("click", function() {
+    currentReview += 1;
+    viewReview();
+});
+
+previousReview.addEventListener("click", function() {
+    currentReview -= 1;
+    if(currentReview<0)
+        currentReview = featuredReviews.length - 1;
+    viewReview();
+});
