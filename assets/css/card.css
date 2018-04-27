@@ -5,6 +5,7 @@
 
 .card {
     -moz-perspective: 1500px;
+    transform-style: preserve-3d;
     perspective: 1500px;
     position: relative;
     height: 500px;
@@ -19,6 +20,7 @@
 .card-side {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    transform-style: inherit;
     position: absolute;
     top: 0;
     left: 0;
