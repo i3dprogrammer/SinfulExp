@@ -1,11 +1,11 @@
 .section-available-hacks {
     background-color: rgb(46, 46, 46);
     padding: 50px;
+    min-height: 400px;
 }
 
 .card {
     -moz-perspective: 1500px;
-    transform-style: preserve-3d;
     perspective: 1500px;
     position: relative;
     height: 500px;
@@ -20,7 +20,6 @@
 .card-side {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    transform-style: inherit;
     position: absolute;
     top: 0;
     left: 0;
@@ -56,7 +55,13 @@
     background-size: cover;
 }
 
-.card-image-1 {
+.card-image-tag {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .card-image-1 {
     background-image: url('../images/BlackSquadBG.jpg');
     background-blend-mode: screen;
 }
@@ -69,7 +74,7 @@
 .card-image-3 {
     background-image: url('../images/PaladinsBG.jpg');
     background-blend-mode: screen;
-}
+} */
 
 /*  */
 
@@ -77,23 +82,25 @@
     font-weight: 300;
     text-transform: uppercase;
     font-size: 28px;
-    color: black;
+    color: whitesmoke;
     position: absolute;
-    top: 190px;
-    text-align: center;
+    top: 160px;
+    text-align: right;
     width: 100%;
+    line-height: 40px;
 }
 
 .heading-span {
     padding: 10 15px;
     box-decoration-break: clone;
+    background-image: linear-gradient(to right, rgba(240, 136, 0, 0.815), rgba(139, 91, 0, 0.795));
 }
 
 .heading-span--1 {
-    border-radius: 10px;
-    background-color: white;
+    /* border-radius: 10px; */
+    /* background-color: white; */
     /* border: 1px solid white; */
-    box-shadow: 0 5px 5px black;
+    /* box-shadow: 0 5px 5px black; */
 }
 
 .card-features ul {
