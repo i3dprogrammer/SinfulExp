@@ -7,7 +7,7 @@
 .card {
     -moz-perspective: 1500px;
     perspective: 1500px;
-    transform-style: preserve-3d;
+    /* transform-style: preserve-3d; */
     position: relative;
     height: 500px;
     width: 300px;

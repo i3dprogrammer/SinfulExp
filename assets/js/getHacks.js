@@ -95,6 +95,12 @@ var loadHacks = function() {
         loadHack(el.name, el.bgimage, el.f1, el.f2, el.f3, el.f4, el.f5)
     });
   
+    if (navigator.appVersion.indexOf("Chrome/") != -1) {
+        document.querySelectorAll('.card').forEach((el, index) => {
+            el.style.transformStyle = 'preserve-3d';
+        })
+    }
+
     site.style.display = 'block';
 
     document.querySelectorAll('.parallax').forEach((parallax, index) => {
@@ -151,3 +157,4 @@ previousReview.addEventListener("click", function() {
         currentReview = featuredReviews.length - 1;
     viewReview();
 });
+
