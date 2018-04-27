@@ -3,7 +3,7 @@ html {
 }
 
 #site {
-    opacity: 0;
+    opacity: 1;
 }
 
 .showAnimation {
@@ -17,10 +17,8 @@ html {
 }
 
 #loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    margin: 0 auto;
 }
 
 .row {

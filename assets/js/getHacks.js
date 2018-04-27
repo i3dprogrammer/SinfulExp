@@ -103,10 +103,6 @@ var loadHacks = function() {
 
     site.style.display = 'block';
 
-    document.querySelectorAll('.parallax').forEach((parallax, index) => {
-        M.Parallax.init(parallax);
-    });
-
     site.classList.add('showAnimation');
     hacksLoading.style.display = 'none';
 }

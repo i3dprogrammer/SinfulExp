@@ -1,4 +1,6 @@
-
+document.querySelectorAll('.parallax').forEach((parallax, index) => {
+    M.Parallax.init(parallax);
+});
 
 M.Modal.init(document.querySelector('.modal'));
 

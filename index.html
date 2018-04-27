@@ -15,8 +15,7 @@
 
 <body>
     <!-- display: none; -->
-    <img src="assets/images/loading.gif" alt="..." id="loading">
-    <div id="site" style="display: none;">
+    <div id="site" style="display: block;">
         <div class="parallax-container">
             <div class="nav navbar" id="nav">
                 <a href="https://sinfulexp.net/forum/" class="nav-item">Forum</a>
@@ -135,6 +134,7 @@
             </section>
             <section class="section-available-hacks">
                 <div class="container">
+                    <img src="assets/images/loading.gif" alt="..." id="loading">
                     <div class="row" id="hacksRow">
                     </div>
                     <div class="all-hacks u-center-text">
@@ -182,7 +182,11 @@
                 </div>
             </section>
             <section class="section-reviews">
-                <div class="review-arrow left-review-arrow" id="previous-review">&laquo;</div>
+                <div class="review-arrow left-review-arrow" id="previous-review">
+                        <div class="circle-content">
+                            &laquo;
+                        </div>
+                </div>
                 <div class="container">
                     <div class="heading-secondary u-margin-bottom-large u-white-color u-thin-text">We make our users genuinely happy!</div>
                     <div class="review reviewChange" id="review">
@@ -194,7 +198,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="review-arrow right-review-arrow" id="next-review">&raquo;</div>
+                <div class="review-arrow right-review-arrow" id="next-review">
+                    <div class="circle-content">
+                        &raquo;
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
