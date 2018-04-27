@@ -108,7 +108,7 @@ var loadHacks = function() {
 var loadHack = function(name, img, hackf1, hackf2, hackf3, hackf4, hackf5){
     var obj = getHackObjectWithName(name);
     if(obj){
-        hacksRow.appendChild(hackCard(name, obj.Status, img, hackf1, hackf2, hackf4, hackf4, hackf5, obj.Prices[0], obj.Prices[1], obj.Prices[2]));
+        hacksRow.appendChild(hackCard(name, obj.Status, img, hackf1, hackf2, hackf3, hackf4, hackf5, obj.Prices[0], obj.Prices[1], obj.Prices[2]));
     } else {
 
     }
