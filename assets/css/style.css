@@ -2,6 +2,10 @@ html {
     background-color: rgb(51, 51, 51);
 }
 
+body {
+    overflow-x: hidden;
+}
+
 #site {
     opacity: 1;
 }
@@ -386,6 +390,14 @@ html {
     content: 'Undetected';
 }
 
+.updating {
+    background: rgb(0, 0, 133);
+}
+
+.updating::after{
+    content: 'Updating';
+}
+
 .white-text {
     color:white;
     font-weight: normal;
@@ -416,10 +428,15 @@ html {
     box-shadow: 0px 0px 15px black;
 }
 
+.showhacks-button {
+    z-index: 2;
+}
+
 footer {
     padding: 2px;
     margin: 0px;
     color: white;
     background-color: rgb(46, 46, 46);
     text-align: center;
+    font-size: 14px;
 }

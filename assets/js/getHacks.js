@@ -3,6 +3,8 @@ var allHacks = [];
 var hacksRow = document.getElementById("hacksRow");
 var site = document.getElementById("site");
 var hacksLoading = document.getElementById("loading");
+
+
 var getHackObjectWithName = function (name) {
     if (allHacks.filter(e => e.Hack == name).length > 0)
         return allHacks.filter(e => e.Hack == name)[0];
@@ -119,6 +121,14 @@ var loadHack = function(name, img, hackf1, hackf2, hackf3, hackf4, hackf5){
 window.onload = function() {
     loadHacksStatus();
 }
+
+var showAllHacksEl = document.getElementById("show-all-hacks");
+showAllHacksEl.addEventListener('click', () => {
+    showAllHacksEl.style.display = 'none';
+    extraHacks.forEach((el, index) => {
+        loadHack(el.name, el.bgimage, el.f1, el.f2, el.f3, el.f4, el.f5)
+    });
+});
 
 //hacksRow.appendChild(hackCard('Paladins', 'undetected', 'Aimbot', 'Wallhack', 'ESP', 'No Recoil', 'No Spread & MORE!', '1 Month - $20', '3 Month - $30', '1 YEAR - $100'));
 
