@@ -1,5 +1,4 @@
 var allHacks = [];
-
 var hacksRow = document.getElementById("hacksRow");
 var site = document.getElementById("site");
 var hacksLoading = document.getElementById("loading");
