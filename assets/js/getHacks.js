@@ -104,17 +104,18 @@ var loadHacks = function() {
 
 var loadHack = function(name, img, hackf1, hackf2, hackf3, hackf4, hackf5){
 
-    if (navigator.appVersion.indexOf("Chrome/") != -1) {
-        document.querySelectorAll('.card').forEach((el, index) => {
-            el.style.transformStyle = 'preserve-3d';
-        })
-    }
-
     var obj = getHackObjectWithName(name);
     if(obj){
         hacksRow.appendChild(hackCard(name, obj.Status, img, hackf1, hackf2, hackf3, hackf4, hackf5, obj.Prices[0], obj.Prices[1], obj.Prices[2]));
     } else {
 
+    }
+
+    
+    if (navigator.appVersion.indexOf("Chrome/") != -1) {
+        document.querySelectorAll('.card').forEach((el, index) => {
+            el.style.transformStyle = 'preserve-3d';
+        })
     }
 }
 

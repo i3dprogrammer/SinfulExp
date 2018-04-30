@@ -434,6 +434,7 @@ body {
     color: rgba(255,255,255,.7);
     text-align: right;
     padding-bottom: 10px;
+    margin-bottom: 10px;
     z-index: 2;
     cursor: pointer;
     border-bottom: 1px solid rgba(255,255,255,.7);
