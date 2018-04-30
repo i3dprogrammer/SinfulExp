@@ -4,7 +4,6 @@ var hacksRow = document.getElementById("hacksRow");
 var site = document.getElementById("site");
 var hacksLoading = document.getElementById("loading");
 
-
 var getHackObjectWithName = function (name) {
     if (allHacks.filter(e => e.Hack == name).length > 0)
         return allHacks.filter(e => e.Hack == name)[0];
@@ -96,20 +95,22 @@ var loadHacks = function() {
     featuredHacks.forEach((el, index) => {
         loadHack(el.name, el.bgimage, el.f1, el.f2, el.f3, el.f4, el.f5)
     });
-  
-    if (navigator.appVersion.indexOf("Chrome/") != -1) {
-        document.querySelectorAll('.card').forEach((el, index) => {
-            el.style.transformStyle = 'preserve-3d';
-        })
-    }
 
     site.style.display = 'block';
+    showAllHacksEl.style.display = 'inline-block';
 
     site.classList.add('showAnimation');
     hacksLoading.style.display = 'none';
 }
 
 var loadHack = function(name, img, hackf1, hackf2, hackf3, hackf4, hackf5){
+
+    if (navigator.appVersion.indexOf("Chrome/") != -1) {
+        document.querySelectorAll('.card').forEach((el, index) => {
+            el.style.transformStyle = 'preserve-3d';
+        })
+    }
+
     var obj = getHackObjectWithName(name);
     if(obj){
         hacksRow.appendChild(hackCard(name, obj.Status, img, hackf1, hackf2, hackf3, hackf4, hackf5, obj.Prices[0], obj.Prices[1], obj.Prices[2]));
@@ -123,6 +124,7 @@ window.onload = function() {
 }
 
 var showAllHacksEl = document.getElementById("show-all-hacks");
+
 showAllHacksEl.addEventListener('click', () => {
     showAllHacksEl.style.display = 'none';
     extraHacks.forEach((el, index) => {
