@@ -3,50 +3,50 @@ var hacksRow = document.getElementById("hacksRow");
 var site = document.getElementById("site");
 var hacksLoading = document.getElementById("loading");
 
-var getHackObjectWithName = function (name) {
-    if (allHacks.filter(e => e.Hack == name).length > 0)
-        return allHacks.filter(e => e.Hack == name)[0];
-    else
-        return null;
-}
+// var getHackObjectWithName = function (name) {
+//     if (allHacks.filter(e => e.Hack == name).length > 0)
+//         return allHacks.filter(e => e.Hack == name)[0];
+//     else
+//         return null;
+// }
 
-var loadHacksStatus = function () {
-    //First we get all the hacks & their statuses
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            allHacks = JSON.parse(this.responseText);
-            //Second we get the hacks prices
-            loadHackPrices();
-        }
-    }
-    xhr.open("GET", "https://cors-anywhere.herokuapp.com/https://guid.sinfulexp.net/panel/functions.php?action=getHackStatus");
-    xhr.send();
-}
+// var loadHacksStatus = function () {
+//     //First we get all the hacks & their statuses
+//     var xhr = new XMLHttpRequest();
+//     xhr.onreadystatechange = function () {
+//         if (this.readyState === 4 && this.status === 200) {
+//             allHacks = JSON.parse(this.responseText);
+//             //Second we get the hacks prices
+//             loadHackPrices();
+//         }
+//     }
+//     xhr.open("GET", "https://cors-anywhere.herokuapp.com/https://guid.sinfulexp.net/panel/functions.php?action=getHackStatus");
+//     xhr.send();
+// }
 
-var loadHackPrices = function () {
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            var hackPrices = JSON.parse(this.responseText);
-            hackPrices.forEach((el, index) => {
-                if (allHacks.filter(e => e.Hack == el.Hack).length > 0) {
+// var loadHackPrices = function () {
+//     var xhr = new XMLHttpRequest();
+//     xhr.onreadystatechange = function () {
+//         if (this.readyState === 4 && this.status === 200) {
+//             var hackPrices = JSON.parse(this.responseText);
+//             hackPrices.forEach((el, index) => {
+//                 if (allHacks.filter(e => e.Hack == el.Hack).length > 0) {
 
-                    if (getHackObjectWithName(el.Hack).Prices) {
-                        getHackObjectWithName(el.Hack).Prices.push(`${el.Length} ${el.Unit} - $${el.Price}`);
-                    }
-                    else {
-                        getHackObjectWithName(el.Hack).Prices = [`${el.Length} ${el.Unit} - $${el.Price}`];
-                    }
-                }
-            });
-            // After we get all the prices, we show the hacks
-            loadHacks();
-        }
-    }
-    xhr.open("GET", "https://cors-anywhere.herokuapp.com/https://guid.sinfulexp.net/panel/functions.php?action=getPrice");
-    xhr.send();
-}
+//                     if (getHackObjectWithName(el.Hack).Prices) {
+//                         getHackObjectWithName(el.Hack).Prices.push(`${el.Length} ${el.Unit} - $${el.Price}`);
+//                     }
+//                     else {
+//                         getHackObjectWithName(el.Hack).Prices = [`${el.Length} ${el.Unit} - $${el.Price}`];
+//                     }
+//                 }
+//             });
+//             // After we get all the prices, we show the hacks
+//             loadHacks();
+//         }
+//     }
+//     xhr.open("GET", "https://cors-anywhere.herokuapp.com/https://guid.sinfulexp.net/panel/functions.php?action=getPrice");
+//     xhr.send();
+// }
 
 var hackCard = function (hackName, hackStatus, imgLink, hackf1, hackf2, hackf3, hackf4, hackf5, price1, price2, price3) {
     var e = document.createElement("div");
@@ -70,6 +70,13 @@ var hackCard = function (hackName, hackStatus, imgLink, hackf1, hackf2, hackf3, 
                         <li>${hackf5}</li>
                     </ul>
                 </div>
+                <div class="card-buy-mobile">
+                    <div class="hcenter">
+                        <div class="price-duration">${price1.split('-')[0].trim()}</div>
+                        <div class="price-value">${price1.split('-')[1].trim()}</div>
+                        <a href="https://sinfulexp.net/forum/payments.php" class="custom-button btn-white">Buy now!</a>
+                    </div>
+                </div>
             </div>
             <div class="card-side card-side--back card-side--back-1">
                 <div class="box-center">
@@ -88,11 +95,10 @@ var hackCard = function (hackName, hackStatus, imgLink, hackf1, hackf2, hackf3, 
     return e;
 }
 
-
 var loadHacks = function() {
 
     featuredHacks.forEach((el, index) => {
-        loadHack(el.name, el.bgimage, el.f1, el.f2, el.f3, el.f4, el.f5)
+        loadHack(el)
     });
 
     site.style.display = 'block';
@@ -102,16 +108,20 @@ var loadHacks = function() {
     hacksLoading.style.display = 'none';
 }
 
-var loadHack = function(name, img, hackf1, hackf2, hackf3, hackf4, hackf5){
+var loadHack = function(hack){
 
-    var obj = getHackObjectWithName(name);
-    if(obj){
-        hacksRow.appendChild(hackCard(name, obj.Status, img, hackf1, hackf2, hackf3, hackf4, hackf5, obj.Prices[0], obj.Prices[1], obj.Prices[2]));
-    } else {
+    // var obj = getHackObjectWithName(name);
+    // if(obj){
+    //     hacksRow.appendChild(hackCard(hack.name, obj.Status, hack.img, hack.hackf1, hack.hackf2, hack.hackf3, hack.hackf4, hack.hackf5, obj.Prices[0], obj.Prices[1], obj.Prices[2]));
+    // } else {
 
-    }
-
+    // }
     
+    if(!hack.status)
+        hack.status = 'none';
+
+    hacksRow.appendChild(hackCard(hack.name, hack.status, hack.bgimage, hack.f1, hack.f2, hack.f3, hack.f4, hack.f5, hack.p1, hack.p2, hack.p3));
+
     if (navigator.appVersion.indexOf("Chrome/") != -1) {
         document.querySelectorAll('.card').forEach((el, index) => {
             el.style.transformStyle = 'preserve-3d';
@@ -120,7 +130,7 @@ var loadHack = function(name, img, hackf1, hackf2, hackf3, hackf4, hackf5){
 }
 
 window.onload = function() {
-    loadHacksStatus();
+    loadHacks();
 }
 
 var showAllHacksEl = document.getElementById("show-all-hacks");
@@ -128,7 +138,7 @@ var showAllHacksEl = document.getElementById("show-all-hacks");
 showAllHacksEl.addEventListener('click', () => {
     showAllHacksEl.style.display = 'none';
     extraHacks.forEach((el, index) => {
-        loadHack(el.name, el.bgimage, el.f1, el.f2, el.f3, el.f4, el.f5)
+        loadHack(el)
     });
 });
 

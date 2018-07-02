@@ -253,9 +253,9 @@ body {
 .about-image {
     position: absolute;
     top: 0%;
-    left: 0;
+    left: 0%;
     width: 450px;
-    z-index: 1;
+    z-index: 0;
     transition: all .3s;
     box-shadow: 0px 5px 15px black;
     border-radius: 3px;
@@ -274,19 +274,45 @@ body {
 }
 
 .about-image-2 {
-    /* background-color: black; */
     top: 10%;
     left: 30%;
 }
 
 .about-image-3 {
-    /* background-color: yellow; */
     top: 20%;
     left: 10%;
 }
 
 .about-images:hover .about-image:not(:hover){
     transform: scale(0.95);
+}
+
+@media only screen and (max-width: 600px) { 
+    .about-image {
+        transform:scale(.7);
+        width: 400px;
+    }
+
+    .about-image-1 {
+        left: -10%;
+    }
+
+    .about-image-2 {
+        left: 0%;
+        z-index: 1;
+    }
+
+    .about-image-3 {
+        left: -5%;
+    }
+
+    .about-image:hover {
+        transform: scale(.8);
+    }
+
+    .about-images:hover .about-image:not(:hover){
+        transform: scale(0.65);
+    }
 }
 
 /* Available hacks section */
@@ -453,4 +479,8 @@ footer {
     background-color: rgb(46, 46, 46);
     text-align: center;
     font-size: 14px;
+}
+
+.hcenter {
+    text-align: center;
 }

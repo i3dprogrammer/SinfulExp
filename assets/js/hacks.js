@@ -7,6 +7,10 @@ var extraHacks = [
         'f3': 'No Recoil',
         'f4': 'ESP',
         'f5': 'No Spread & MORE!',
+        'p1': '1 Month - $15.00',
+        'p2': '2 Month - $25.00',
+        'p3': '3 Month - $35.00',
+        'status': 'new'
     },
     {
         'name': 'Crossfire BR-VIP',
@@ -16,6 +20,9 @@ var extraHacks = [
         'f3': 'No Recoil',
         'f4': 'ESP',
         'f5': 'No Spread & MORE!',
+        'p1': '1 Month - $15.00',
+        'p2': '2 Month - $25.00',
+        'p3': '3 Month - $35.00',
     },
     {
         'name': 'Alliance of Valiant Arms : Garena',
@@ -25,6 +32,9 @@ var extraHacks = [
         'f3': 'No Recoil',
         'f4': 'ESP',
         'f5': 'No Spread & MORE!',
+        'p1': '1 Month - $15.00',
+        'p2': '2 Month - $25.00',
+        'p3': '3 Month - $35.00',
     }
 ]
 
@@ -37,6 +47,9 @@ var featuredHacks = [
         'f3': 'No Recoil',
         'f4': 'ESP',
         'f5': 'No Spread & MORE!',
+        'p1': '1 Month - $15.00',
+        'p2': '2 Month - $25.00',
+        'p3': '3 Month - $35.00',
     },
     {
         'name': 'Alliance of Valiant Arms : EnMasse',
@@ -46,6 +59,9 @@ var featuredHacks = [
         'f3': 'No Recoil',
         'f4': 'ESP',
         'f5': 'No Spread & MORE!',
+        'p1': '1 Month - $15.00',
+        'p2': '2 Month - $25.00',
+        'p3': '3 Month - $35.00',
     },
     {
         'name': 'Paladins: Champions of the Realm',
@@ -55,6 +71,9 @@ var featuredHacks = [
         'f3': 'No Recoil',
         'f4': 'ESP',
         'f5': 'No Spread & MORE!',
+        'p1': '1 Month - $15.00',
+        'p2': '2 Month - $25.00',
+        'p3': '3 Month - $35.00',
     }
 ]
 
