@@ -131,6 +131,7 @@ var loadHack = function(hack){
 
 window.onload = function() {
     loadHacks();
+    viewReview();
 }
 
 var showAllHacksEl = document.getElementById("show-all-hacks");

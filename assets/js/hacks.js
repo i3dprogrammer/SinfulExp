@@ -79,15 +79,15 @@ var featuredHacks = [
 
 var featuredReviews = [
     {
-        title: '#1 Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        review: '#1 1Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias explicabo nihil tempore saepe doloribus aut ea excepturi consequuntur ut nulla minima maxime totam culpa quae sit molestias, quibusdam assumenda beatae?', 
+        title: ' S3R1OUS - Paladins hack review ',
+        review: 'I would recommend this hack it is very good it offers everything you need and it has a little bit better price then other hacks I used', 
     },
     {
-        title: '#2 Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        review: '#2 1Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias explicabo nihil tempore saepe doloribus aut ea excepturi consequuntur ut nulla minima maxime totam culpa quae sit molestias, quibusdam assumenda beatae?', 
+        title: 'Kign - Sinful EXP - Black Squad - Review',
+        review: "This is the only full menu hack that is out right now and works flawlessly. I have been playing Black Squad for about 3-4 days now and have been leveling like crazy just off using 4 features in this hack without Aimbot. The price is perfect being that it is the only one out that is still lowkey so won't get patched as other popular hacking sites.", 
     },
     {
-        title: '#3 Lorem ipsum dolor sit amet consectetur adipisicing elit',
-        review: '## 1Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias explicabo nihil tempore saepe doloribus aut ea excepturi consequuntur ut nulla minima maxime totam culpa quae sit molestias, quibusdam assumenda beatae?', 
+        title: 'Artstar123 - Honest Review: Black Squad ',
+        review: 'about hack/in-game menu, yes the developer/coder has done a pretty awesome job! 10/10 for that. All of the features provided work perfectly as described. (Totally impressed).', 
     },
 ]
