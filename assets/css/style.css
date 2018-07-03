@@ -485,3 +485,22 @@ footer {
     text-align: center;
 }
 
+#loading {
+    width: 100px;
+    height: 100px;
+    border: 10px solid black;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    animation: rotate-animation 1s infinite linear;
+}
+
+@keyframes rotate-animation {
+    0% {
+        transform: rotate(0deg)''
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
